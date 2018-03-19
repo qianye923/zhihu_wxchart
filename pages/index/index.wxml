@@ -9,6 +9,7 @@
       </swiper-item>
     </block>
   </swiper>
+
   <view class="news-item-container">
     <block wx:for="{{list}}" wx:for-index="id">
       <text wx:if="{{item.header}}" class="sub-title">{{item.header}}</text>

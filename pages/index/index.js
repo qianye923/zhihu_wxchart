@@ -14,6 +14,7 @@ Page({
   },
   //事件处理函数
   bindViewTap(e) {
+    // console.log(e)
     wx.navigateTo({
       url: '../detail/detail?id=' + e.target.dataset.id
     })
@@ -48,7 +49,8 @@ Page({
       headers: {
         'Content-Type': 'application/json'
       },
-      success (res) {
+      success(res) {
+        console.log(res)
          that.setData({
            banner: res.data.top_stories,
            list: [{ header: '今日热闻' }].concat(res.data.stories)
